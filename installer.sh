@@ -1,7 +1,8 @@
 #!/bin/bash
-read -r -p "Have you cross-checked the alexa app directory in the scripts (Y/N)? " verify_interrupt
+read -r -p "Enter the location of alexa-avs-sample-app folder, Eg: if it is in desktop then enter ~Desktop or \nif it is in /home/pi/ directory, then enter /home/pi" path
+read -r -p "Have you placed the alexa app in $path? (Y/N)" verify_interrupt
 case ${verify_interrupt} in
-            [nN] )
+            [yY] )
                 echo "Continuing ..."
             ;;
             * )
@@ -9,6 +10,9 @@ case ${verify_interrupt} in
                 exit
             ;;
 esac
+sed '1 a cd $path/alexa-avs-sample-app/samples' /home/pi/headless-alexa-avs-sample-app/scripts/clientstart.sh
+sed '1 a cd $path/alexa-avs-sample-app/samples' /home/pi/headless-alexa-avs-sample-app/scripts/companionstart.sh
+sed '1 a cd $path/alexa-avs-sample-app/samples' /home/pi/headless-alexa-avs-sample-app/scripts/wakeword.sh
 sudo chmod +x /home/pi/headless-alexa-avs-sample-app/scripts/clientstart.sh
 sudo chmod +x /home/pi/headless-alexa-avs-sample-app/scripts/companionstart.sh
 sudo chmod +x /home/pi/headless-alexa-avs-sample-app/scripts/service-installer.sh
