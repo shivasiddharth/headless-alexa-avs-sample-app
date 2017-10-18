@@ -1,5 +1,5 @@
 [Unit]
-Description=Companion Service
+Description=Client Service
 After=network.target companionapp.service
 Requires=companionapp.service
 
