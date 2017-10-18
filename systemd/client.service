@@ -1,0 +1,16 @@
+[Unit]
+Description=Companion Service
+After=network.target companionapp.service
+Requires=companionapp.service
+
+[Service]
+Environment=PATH=/home/pi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/bin/bash /home/pi/headless-alexa-avs-sample-app/scripts/clientstart.sh
+WorkingDirectory=/home/pi/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
