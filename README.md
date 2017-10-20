@@ -5,6 +5,7 @@
 **********************************************************************  
 **This does not modify your installed alexa-avs-sample-app in any manner. Please do not open issues relating to the working of alexa-avs-sample-app here. Post your issues pertaining to the running of services alone here.**  
 **********************************************************************  
+**Install the alexa-avs-sample-app and first make sure that it is working fine.**  
 
 1. Clone the git using:  
 ```
