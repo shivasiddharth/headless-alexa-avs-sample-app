@@ -17,4 +17,6 @@ sudo /home/pi/headless-alexa-avs-sample-app/scripts/service-installer.sh
 sudo systemctl enable companionapp.service
 sudo systemctl enable client.service
 sudo systemctl enable wakeword.service
+sudo systemctl start companionapp.service
+sudo systemctl start client.service
 sudo systemctl start wakeword.service

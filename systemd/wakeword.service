@@ -7,8 +7,8 @@ Requires=companionapp.service client.service
 Environment=PATH=/home/pi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ExecStart=/bin/bash /home/pi/headless-alexa-avs-sample-app/scripts/wakeword.sh
 WorkingDirectory=/home/pi/
-StandardOutput=inherit
-StandardError=inherit
+StandardOutput=tty,
+StandardError=tty
 Restart=always
 User=pi
 
