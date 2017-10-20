@@ -7,18 +7,18 @@
 **********************************************************************  
 
 1. Clone the git using:  
-'''
-git clone https://github.com/shivasiddharth/headless-alexa-avs-sample-app
-'''
+```
+git clone https://github.com/shivasiddharth/headless-alexa-avs-sample-app  
+```
 
 2. Check and verify the path of the installed alexa-avs-sample-app in the clientstart.sh, companionstart.sh	and wakeword.sh scripts  
 
 3. Make the installer executable using:
-'''
+```
 sudo chmod +x /home/pi/headless-alexa-avs-sample-app/installer.sh  
-'''
+```
 
 4. Execute the installer:  
-'''
+```
 sudo /home/pi/headless-alexa-avs-sample-app/installer.sh  
-'''
+```
