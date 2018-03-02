@@ -1,5 +1,5 @@
 #!/bin/bash
 cd ~/Desktop/alexa-avs-sample-app/samples
-sleep 45
+sleep 45s
 aplay /home/pi/headless-alexa-avs-sample-app/Startup.wav
-cd wakeWordAgent/src && sudo ./wakeWordAgent -e kitt_ai
+cd wakeWordAgent/src && ./wakeWordAgent -e kitt_ai
